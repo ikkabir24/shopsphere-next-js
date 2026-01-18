@@ -53,7 +53,7 @@ export default function CustomerReviews() {
     ];
 
     return (
-        <section className="py-16 bg-gray-50">
+        <section className="pb-16">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto">
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
