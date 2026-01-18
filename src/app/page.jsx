@@ -2,6 +2,8 @@ import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import Hero from "@/components/LandingPageSections/Hero";
+import FeaturedCategories from "@/components/LandingPageSections/FeaturedCategories";
+import CustomerReviews from "@/components/LandingPageSections/CustomerReviews";
 
 export default function Home() {
   return (
@@ -15,26 +17,7 @@ export default function Home() {
         <Hero />
 
         {/* 2) Featured Categories */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-gray-900">Featured Categories</h2>
-            <p className="mt-2 text-gray-600">
-              Explore gadgets by category to find what you need faster.
-            </p>
-
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Earbuds", "Smartwatch", "Chargers", "Keyboards"].map((c) => (
-                <div
-                  key={c}
-                  className="border rounded-xl p-5 hover:shadow-sm transition bg-white"
-                >
-                  <p className="font-semibold text-gray-900">{c}</p>
-                  <p className="text-sm text-gray-600 mt-1">Curated picks</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FeaturedCategories />
 
         {/* 3) Best Sellers Preview */}
         <section className="py-16 bg-gray-50">
@@ -114,25 +97,7 @@ export default function Home() {
         </section>
 
         {/* 6) Customer Reviews */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-gray-900">Customer Reviews</h2>
-            <p className="mt-2 text-gray-600">What users say about the ShopSphere experience.</p>
-
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { name: "Ayesha", text: "Clean design and super easy to navigate." },
-                { name: "Rafi", text: "Item details page is clear and informative." },
-                { name: "Nila", text: "Loved the smooth browsing experience." },
-              ].map((r) => (
-                <div key={r.name} className="border rounded-2xl p-6">
-                  <p className="text-gray-700">“{r.text}”</p>
-                  <p className="mt-4 text-sm font-semibold text-gray-900">{r.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <CustomerReviews />
 
         {/* 7) Newsletter / CTA */}
         <section className="py-16 bg-gray-100">
