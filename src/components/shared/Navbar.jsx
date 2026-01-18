@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/items", label: "Items" },
     { href: "/contact", label: "Contact" },
-    { href: "/aboutUs", label: "About Us" },
+    { href: "/about", label: "About Us" },
     { href: "/login", label: "Login" },
   ];
 
@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur shadow-lg">
       <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left: Logo */}
         <WebLogo />
