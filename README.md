@@ -4,7 +4,7 @@
 **ShopSphere – Mini E-Commerce Product Catalog (Gadgets & Accessories)**
 
 # Live URL:
-**Not Deployed (Runs on Localhost)**
+https://shopsphere-next-js.vercel.app/
 
 # Purpose:
 ShopSphere is a simple mini e-commerce product catalog built with **Next.js 15/16 (App Router)**.  
