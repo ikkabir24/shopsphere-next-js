@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Project Info
 
-## Getting Started
+# Project Name:
+**ShopSphere – Mini E-Commerce Product Catalog (Gadgets & Accessories)**
 
-First, run the development server:
+# Live URL:
+**Not Deployed (Runs on Localhost)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Purpose:
+ShopSphere is a simple mini e-commerce product catalog built with **Next.js 15/16 (App Router)**.  
+The goal of this project is to demonstrate core Next.js skills including **App Router routing, Route Handlers (API), dynamic routes, public pages, mock authentication with cookies, middleware-based route protection, and a clean component-based UI**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project focuses only on the **main assignment requirements** (no optional features).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Key Features:
 
-## Learn More
+### Landing Page
+- Public landing page with **7 separate sections** (component-based)
+- Responsive navbar + footer
+- Hero section uses **Swiper carousel**
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication (Mock)
+- Hardcoded email/password login
+- Authentication state stored in cookies
+- Redirects to **/items** after successful login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Demo Credentials**
+- Email: `demo@shopsphere.com`
+- Password: `123456`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Route Protection
+- Protected route: **/profile**
+- Unauthenticated users are redirected to **/login**
+- Implemented using **Next.js Middleware**
+- Uses secure `httpOnly` cookie for protection + a UI cookie for showing/hiding navbar buttons
 
-## Deploy on Vercel
+### Items / Lists (Public)
+- Public Items page (**/items**) fetches items from internal API
+- Shows item cards with **name, description, price, and image**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Item Details (Public)
+- Public dynamic details page (**/items/[id]**)
+- Fetches a single item from internal API and shows full details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### UI & UX
+- Clean, modern UI with Tailwind CSS
+- Fully responsive (mobile/tablet/desktop)
+- Swiper-based hero + review carousel
+- Component-based section architecture for maintainability
+
+---
+
+# Routes Summary:
+
+### Public Routes
+- `/` → Landing Page
+- `/items` → Items List Page
+- `/items/[id]` → Item Details Page
+- `/login` → Login Page
+
+### Protected Routes
+- `/profile` → Protected Profile Page (requires login)
+
+---
+
+# API Routes (Next.js Route Handlers):
+
+| Method | Route | Description |
+|-------|------|-------------|
+| GET | `/api/items` | Get all items |
+| GET | `/api/items/:id` | Get single item by id |
+| POST | `/api/auth/login` | Mock login & set cookies |
+| POST | `/api/auth/logout` | Logout & clear cookies |
+
+---
+
+# Technologies Used:
+Frontend / Fullstack (Single Repo)
+Next.js 15/16 (App Router)
+React
+Tailwind CSS
+Swiper.js
+
+---
+
+# Authentication / Protection
+Cookies (httpOnly + UI cookie)
+Next.js Middleware
+
+---
+
+# Author:
+Kabir
+ShopSphere – Next.js Assignment Project
